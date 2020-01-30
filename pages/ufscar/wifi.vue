@@ -1,7 +1,5 @@
 <template>
-  <main class="container">
-    <h1>USP</h1>
-  </main>
+  <div />
 </template>
 
 <script>

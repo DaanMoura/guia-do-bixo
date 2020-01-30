@@ -1,7 +1,9 @@
 <template>
-  <div class="background">
+  <main class="background">
     <div class="container">
-      <h1>Bem vindo ao Guia do Bixo!</h1>
+      <h1 class="display">
+        Bem vindo ao Guia do Bixo!
+      </h1>
       <p>
         Querido bixo e querida bixete, parabéns pelo ingresso na universidade!
         Os próximos anos de sua vida serão marcados por muito aprendizado e crescimento,
@@ -24,7 +26,7 @@
         Lembrando que todos e todas são bem-vindos (as) em nossos encontros, basta ter curiosidade para estudar os textos bíblicos!
       </p>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -35,15 +37,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  position: relative;
-  margin: 0 8rem;
-  min-height: calc(100vh - 64px);
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-}
-
 p {
   text-align: justify;
 }

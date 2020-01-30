@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    color: #222222;
+}
+
+.container {
+    position: relative;
+    margin: 0 8rem;
+    min-height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+h1, h2 {
+    font-family: 'Roboto Slab', 'serif';
+}
+
+.display {
+  font-size: 48px;
+}
+
+.page-enter-active, .page-leave-active {
+    transition: opacity 1s;
+  }
+  
+.page-enter, .page-leave-active {
+    opacity: 0;
+    transition: opacity 1s;
+  }
