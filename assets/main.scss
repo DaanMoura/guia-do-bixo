@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -15,21 +15,56 @@ html {
     display: flex;
     flex-direction: column;
     z-index: 1;
-  }
+}
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Roboto Slab', 'serif';
 }
 
 .display {
-  font-size: 48px;
+    font-size: 48px;
 }
 
-.page-enter-active, .page-leave-active {
+.page-enter-active,
+.page-leave {
     transition: opacity 1s;
-  }
-  
-.page-enter, .page-leave-active {
+}
+
+.page-enter,
+.page-leave-active {
     opacity: 0;
     transition: opacity 1s;
-  }
+}
+
+.img-card {
+    border-radius: 15px;
+    object-fit: cover;
+    margin: 8px;
+}
+
+.card {
+  border-radius: 15px;
+  border: 1px solid #CFCFCF;
+  padding: 16px 24px;
+  padding-top: 4px;
+  margin: 8px;
+}
+
+.rounded-button {
+    border-radius: 20px;
+    font-size: 12px;
+    color: #028A38;
+    font-stretch: condensed;
+    border: 1px solid #CFCFCF;
+    padding: 8px 16px;
+    background-color: transparent;
+    transition: 0.4s;
+    cursor: pointer;
+    &:hover {
+        background-color: #028A38;
+        border: 1px solid #028A38;
+        color: #ffffff;
+        transition: 0.4s;
+    }
+}

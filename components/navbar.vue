@@ -7,16 +7,16 @@
         ABUSCar {{ activeTab }}
       </div>
     </nuxt-link>
-    <nuxt-link :class="{ 'active': $nuxt.$route.name === 'index' }" to="/" class="nav-item">
+    <nuxt-link :class="{ 'active': $nuxt.$route.name.includes('index') }" to="/" class="nav-item">
       Início
     </nuxt-link>
-    <nuxt-link :class="{ 'active': $nuxt.$route.name === 'ufscar' }" to="/ufscar" class="nav-item">
+    <nuxt-link :class="{ 'active': $nuxt.$route.name.includes('ufscar') }" to="/ufscar" class="nav-item">
       UFSCar
     </nuxt-link>
-    <nuxt-link :class="{ 'active': $nuxt.$route.name === 'usp' }" to="/usp" class="nav-item">
+    <nuxt-link :class="{ 'active': $nuxt.$route.name.includes('usp') }" to="/usp" class="nav-item">
       USP
     </nuxt-link>
-    <nuxt-link :class="{ 'active': $nuxt.$route.name === 'sao_carlos' }" to="/sao_carlos" class="nav-item">
+    <nuxt-link :class="{ 'active': $nuxt.$route.name.includes('sao_carlos') }" to="/sao_carlos" class="nav-item">
       São Carlos
     </nuxt-link>
   </div>
@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 a {
   position: relative;
   text-decoration: none;
@@ -88,5 +88,9 @@ $thetransition: all .2s cubic-bezier(1,.50,0,.75) 0s;
   display: flex;
   padding: 8px 32px;
   align-items: center;
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+  z-index: 999;
 }
 </style>

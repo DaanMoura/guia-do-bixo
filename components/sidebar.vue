@@ -2,7 +2,7 @@
   <div class="sidebar">
     <img :src="image">
     <ul>
-      <li v-for="(item,index) in items" :key="index" :class="{'active': $nuxt.$route.name.includes(item.subroute)}">
+      <li v-for="(item,index) in items" :key="index" :class="{'active': $nuxt.$route.path === item.route}">
         <nuxt-link :to="`${item.route}`">
           {{ item.name }}
         </nuxt-link>

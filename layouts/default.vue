@@ -1,8 +1,10 @@
 <template>
   <div>
     <navbar />
-    <transition>
-      <nuxt />
+    <transition name="page">
+      <div class="main">
+        <nuxt />
+      </div>
     </transition>
   </div>
 </template>
@@ -16,5 +18,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.main {
+  position: absolute;
+  z-index: 0;
+  margin-top: 64px;
+}
 
 </style>

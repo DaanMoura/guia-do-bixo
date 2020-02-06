@@ -44,6 +44,10 @@ main {
     flex-direction: row;
 }
 
+.content {
+  margin-left: 24px;
+}
+
 .page-enter-active, .page-leave-active {
   transition: all .4s cubic-bezier(.55,0,.1,1);
   opacity: 1;
