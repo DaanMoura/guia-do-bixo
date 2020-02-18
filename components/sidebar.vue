@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <img :src="image">
+    <!-- <img :src="image"> -->
     <ul>
       <li v-for="(item,index) in items" :key="index" :class="{'active': $nuxt.$route.path === item.route}">
         <nuxt-link :to="`${item.route}`">
@@ -29,9 +29,11 @@ export default {
 
 <style lang="scss" scoped>
 .sidebar {
-    height: 100%;
+    // height: 300px;
+    min-width: 250px;
+    max-width: 250px;
+    // min-height: calc(95vmax);
     margin: 32px 24px;
-    width: 300px;
     padding: 16px;
     padding-right: 32px;
     border-right: 1px solid #aaaaaa;

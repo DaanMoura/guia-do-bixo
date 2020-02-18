@@ -1,5 +1,6 @@
+const pkg = require('./package')
 
-export default {
+module.exports = {
   mode: 'universal',
   /*
   ** Headers of the page
@@ -13,13 +14,14 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { ref: '/node_modules/@fortawesome/fontawesome-free/css/all.css', rel: 'stylesheet' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap' }
     ]
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#444' },
   /*
   ** Global CSS
   */
@@ -31,6 +33,9 @@ export default {
   */
   plugins: [
   ],
+
+  srcDir: '.',
+  buildDir: '.nuxt',
   /*
   ** Nuxt.js dev-modules
   */
@@ -44,6 +49,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
+    // 'bootstrap-vue/nuxt'
   ],
   /*
   ** Axios module configuration
@@ -58,6 +64,13 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    extractCSS: true,
+    babel: {
+      presets: ['@babel/preset-env'],
+      plugins: [
+        "@babel/plugin-transform-runtime"
+      ]
+    },
     extend (config, ctx) {
     }
   }

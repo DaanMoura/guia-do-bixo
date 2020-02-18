@@ -88,3 +88,7 @@ sw.*
 
 # Vim swap files
 *.swp
+
+functions/node_modules/
+functions/nuxt/
+public/_nuxt/

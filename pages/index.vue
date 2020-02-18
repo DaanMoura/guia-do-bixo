@@ -39,12 +39,7 @@ export default {
 <style lang="scss" scoped>
 p {
   text-align: justify;
-}
-
-.background {
-  background-image: url('../assets/people.png');
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 540px;
+  text-shadow: 1px 1px 4px white ;
+  overflow-wrap: break-word;
 }
 </style>

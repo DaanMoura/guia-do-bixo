@@ -1,43 +1,82 @@
 <template>
   <div class="navbar">
-    <nuxt-link to="/" class="brand">
-      <img src="~/assets/logo.png" class="logo">
-      <div>
-        <strong>GUIA DO BIXO</strong><br>
-        ABUSCar {{ activeTab }}
-      </div>
-    </nuxt-link>
-    <nuxt-link :class="{ 'active': $nuxt.$route.name.includes('index') }" to="/" class="nav-item">
-      Início
-    </nuxt-link>
-    <nuxt-link :class="{ 'active': $nuxt.$route.name.includes('ufscar') }" to="/ufscar" class="nav-item">
-      UFSCar
-    </nuxt-link>
-    <nuxt-link :class="{ 'active': $nuxt.$route.name.includes('usp') }" to="/usp" class="nav-item">
-      USP
-    </nuxt-link>
-    <nuxt-link :class="{ 'active': $nuxt.$route.name.includes('sao_carlos') }" to="/sao_carlos" class="nav-item">
-      São Carlos
-    </nuxt-link>
+    <span @click="visible = !visible" class="nav-icon">#</span>
+    <nav>
+      <nuxt-link to="/" class="brand">
+        <img src="~/assets/logo.png" class="logo">
+        <div>
+          <strong>GUIA DO BIXO</strong><br>
+          ABUSCar 2020
+        </div>
+      </nuxt-link>
+
+      <nuxt-link v-if="visible" :class="{ 'active': $nuxt.$route.name.includes('ufscar') }" to="/ufscar" class="nav-item">
+        UFSCar
+      </nuxt-link>
+      <nuxt-link v-if="visible" :class="{ 'active': $nuxt.$route.name.includes('usp') }" to="/usp" class="nav-item">
+        USP
+      </nuxt-link>
+      <nuxt-link v-if="visible" :class="{ 'active': $nuxt.$route.name.includes('sao_carlos') }" to="/sao_carlos" class="nav-item">
+        São Carlos
+      </nuxt-link>
+      <nuxt-link v-if="visible" :class="{ 'active': $nuxt.$route.name.includes('abu') }" to="/abu" class="nav-item">
+        ABU
+      </nuxt-link>
+      <nuxt-link v-if="visible" :class="{ 'active': $nuxt.$route.name.includes('contato') }" to="/contato" class="nav-item">
+        Contato
+      </nuxt-link>
+    </nav>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  data () {
+    return {
+      visible: true
+    }
+  }
 }
 </script>
 
 <style lang="scss">
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin md {
+  @media (max-width: #{$desktop-width}) {
+      @content;
+  }
+}
+
 a {
   position: relative;
   text-decoration: none;
   color: #222222;
+  font-weight: normal;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+
+  @include md {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.nav-icon {
+  display: none;
+  @include md {
+    display: block;
+  }
 }
 
 .brand {

@@ -7,7 +7,7 @@
       </h1>
       <nuxt-child :key="$route.params.id" />
     </div>
-  </main>
+</main>
 </template>
 
 <script>
@@ -28,8 +28,9 @@ export default {
         { name: 'Moradia Estudantil', route: '/ufscar/moradia' },
         { name: 'Pró-Reitoria de Graduação', route: '/ufscar/prograd' },
         { name: 'Pró-Reitoria de Assuntos Comunitários e Estudantis', route: '/ufscar/proace' },
+        { name: 'Programa de Assistência Estudantil', route: '/ufscar/pae' },
         { name: 'Papelaria', route: '/ufscar/papelaria' },
-        { name: 'Departamento de Atenção à Saúde', route: '/ufscar/daas' },
+        { name: 'Departamento de Atenção à Saúde', route: '/ufscar/deas' },
         { name: 'Rede wi-fi da Ufscar', route: '/ufscar/wifi' },
         { name: 'Encontros abu', route: '/ufscar/abu' }
       ]
