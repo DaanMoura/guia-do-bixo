@@ -14,7 +14,6 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { ref: '/node_modules/@fortawesome/fontawesome-free/css/all.css', rel: 'stylesheet' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap' }
     ]
   },
@@ -49,7 +48,6 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
-    // 'bootstrap-vue/nuxt'
   ],
   /*
   ** Axios module configuration
@@ -68,7 +66,7 @@ module.exports = {
     babel: {
       presets: ['@babel/preset-env'],
       plugins: [
-        "@babel/plugin-transform-runtime"
+        '@babel/plugin-transform-runtime'
       ]
     },
     extend (config, ctx) {

@@ -7,7 +7,8 @@ const app = express()
 
 const config = {
   dev: false,
-  ...nuxtConfig
+  debug: true
+  // ...nuxtConfig
 }
 
 const nuxt = new Nuxt(config)
@@ -27,9 +28,15 @@ async function handleRequest(req, res) {
     await readyPromise
   }
   res.set('Cache-Control', 'public, max-age=1, s-maxage=1')
-  await nuxt.render(req, res)
+  try {
+    await nuxt.render(req, res)
+  } catch (e) {
+    console.error(e)
+    res.send(e)
+  }
 }
 
 app.get('*', handleRequest)
 app.use(handleRequest)
+
 exports.ssrapp = functions.https.onRequest(app)

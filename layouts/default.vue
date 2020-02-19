@@ -24,7 +24,6 @@ export default {
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { ref: '/node_modules/@fortawesome/fontawesome-free/css/all.css', rel: 'stylesheet' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap' }
       ]
     }
