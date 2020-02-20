@@ -48,7 +48,7 @@
 <script>
 
 export default {
-
+  scrollToTop: true
 }
 </script>
 
@@ -58,4 +58,5 @@ p {
   text-shadow: 1px 1px 4px white ;
   overflow-wrap: break-word;
 }
+
 </style>

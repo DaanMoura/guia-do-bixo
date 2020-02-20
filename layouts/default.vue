@@ -24,6 +24,7 @@ export default {
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap' }
       ]
     }
@@ -63,8 +64,11 @@ html {
 .content {
     // padding: 0 32px;
     p {
-        padding: 0 4.8rem 0 8px;
+        padding: 0 3.2rem 0 8px;
         text-align: justify;
+        @include md {
+          padding: 0 2rem 0 8px;
+        }
     }
 }
 
@@ -102,17 +106,16 @@ h2 {
     transition: opacity 1s;
 }
 
-.img-card {
-    border-radius: 15px;
+.rounded {
+   border-radius: 5px;
     object-fit: cover;
     margin: 8px;
-}
-
-.rounded {
-  max-height: 320px;
-  width: auto;
-  object-fit: cover;
-  border-radius: 5px;
+    width: 95%;
+    height: auto;
+    max-height: 350px;
+    @include md {
+      max-height: 280px;
+    }
 }
 
 .card {

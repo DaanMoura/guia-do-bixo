@@ -1,7 +1,7 @@
 <template>
   <div>
     <div div="content">
-      <img src="https://www.concursos.ufscar.br/imagens/portal.jpg" class="img-card">
+      <img src="https://www.concursos.ufscar.br/imagens/portal.jpg" class="rounded">
       <p>Bem-vindo e bem-vinda à Universidade Federal de São Carlos! Esperamos que tenham ótimas experiências por aqui! Contem conosco da ABU para auxiliá-los nos primeiros passos nessa Federal gigante e maravilhosa!</p>
     </div>
   </div>
@@ -14,11 +14,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.img-card {
-  height: 400px;
-}
-
 button {
   margin-top: auto;
   width: fit-content;

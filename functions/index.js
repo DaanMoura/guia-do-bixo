@@ -1,14 +1,12 @@
 const functions = require('firebase-functions')
 const { Nuxt } = require('nuxt')
 const express = require('express')
-const nuxtConfig = require('./nuxt.config')
 
 const app = express()
 
 const config = {
   dev: false,
   debug: true
-  // ...nuxtConfig
 }
 
 const nuxt = new Nuxt(config)

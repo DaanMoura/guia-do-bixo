@@ -1,10 +1,11 @@
 <template>
   <main>
-    <sidebar :items="items" />
+    <sidebar :items="items" class="hide-sm" />
     <div class="content">
       <h1 class="display">
         São Carlos
       </h1>
+      <dropdown :items="items" class="show-sm" />
       <nuxt-child :key="$route.params.id" />
     </div>
   </main>
@@ -12,13 +13,15 @@
 
 <script>
 import Sidebar from '@/components/sidebar'
+import Dropdown from '@/components/dropdown'
 
 export default {
-  components: { Sidebar },
+  components: { Sidebar, Dropdown },
+  scrollToTop: true,
   data () {
     return {
       items: [
-        { name: 'Início', route: '/sao_carlos/' },
+        { name: 'Início', route: '/sao_carlos' },
         { name: 'Saúde', route: '/sao_carlos/saude' },
         { name: 'Ônibus', route: '/sao_carlos/onibus' },
         { name: 'Restaurantes', route: '/sao_carlos/restaurantes' },
@@ -39,9 +42,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin md {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
 main {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+
+  .hide-sm {
+    display: block;
+    @include md {
+      display: none;
+    }
+  }
+
+  .show-sm {
+    display:none;
+    @include md {
+      display: block;
+    }
+  }
 }
 
 .content {
