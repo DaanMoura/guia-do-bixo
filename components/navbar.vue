@@ -43,6 +43,7 @@ export default {
         { title: 'USP', route: 'usp' },
         { title: 'São Carlos', route: 'sao_carlos' },
         { title: 'ABU', route: 'abu' },
+        { title: 'Quarentena', route: 'quarentena' },
         { title: 'Contato', route: 'contato' }
       ]
     }
