@@ -14,14 +14,14 @@ const nuxt = new Nuxt(config)
 let isReady = false
 const readyPromise = nuxt
   .ready()
-  .then(function () {
+  .then(() => {
     isReady = true
   })
-  .catch(function() {
+  .catch(() => {
     process.exit(1)
   })
 
-async function handleRequest(req, res) {
+async function handleRequest (req, res) {
   if (!isReady) {
     await readyPromise
   }

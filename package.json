@@ -22,17 +22,19 @@
     "deploy": "firebase deploy --only functions,hosting"
   },
   "dependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
     "@nuxtjs/axios": "^5.3.6",
     "nuxt": "^2.0.0",
+    "sass": "^1.49.9",
     "vue-click-outside": "^1.0.7"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^1.0.1",
-    "@nuxtjs/eslint-module": "^1.0.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^6.1.0",
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-module": "^3.0.1",
+    "eslint": "^7.1.0",
     "eslint-plugin-nuxt": ">=0.4.2",
-    "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2"
   }
 }
